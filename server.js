@@ -57,7 +57,7 @@ app.post("/random-code/", async (req, res) => {
   const userId = req.query.userId
 
   // Create a random value on request
-  await getRandomCode(1, 1, userId)
+  await getRandomCode(50, 3, userId)
   
   // Retrieve user
   Model.findOne({ userId })
