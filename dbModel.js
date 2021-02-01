@@ -1,6 +1,12 @@
 const mongoose = require("mongoose")
 
+let random = Math.random()
+
 const dbSchema = mongoose.Schema({
+    userId: {
+        type: String,
+        required: true
+    },
     random_code: {
         type: String,
         required: true
@@ -10,7 +16,7 @@ const dbSchema = mongoose.Schema({
     },
     random_point: {
         type: Number,
-        default: Math.random()
+        default: random
     },
     date_created: {
         type: Date,
